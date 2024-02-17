@@ -27,10 +27,6 @@
 
     @media screen and ( max-width: 900px )
         padding: 18vw 0 0
-        .container
-            display: flex
-            flex-direction: column
-            justify-content: space-between
 
         h1
             font-size: 40px
@@ -257,10 +253,10 @@
     background-position: center top
     color: black
     width: 250px
-    filter: drop-shadow(-50px 20px 30px rgba(0, 0, 0, .4))
+    // filter: drop-shadow(-50px 20px 30px rgba(0, 0, 0, .4))
     border-radius: 42px 42px 0 0
     position: relative
-    z-index: 1
+
     span
         display: block
 
@@ -283,6 +279,19 @@
     &__text
         font-size: 10px
         margin: 0 0 40px
+
+    @media screen and ( max-width: 900px )
+        &::before
+            content: ''
+            display: block
+            height: 100%
+            top: 0
+            width: 90%
+            left: 5%
+            border-radius: 42px 
+            box-shadow: -50px 20px 30px 0 rgba(0, 0, 0, .4)
+            position: absolute
+            z-index: -1
 
     @media screen and ( min-width: 900px )
         width: 260px
