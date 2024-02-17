@@ -1,0 +1,314 @@
+@import 'normolize'
+@import 'elements'
+
+.main
+    padding: 0 20px
+    overflow: hidden
+    width: 100%
+    min-height: 100vh
+    min-height: 100lvh
+    display: flex
+    align-items: center
+
+    &-right
+        position: relative
+        z-index: 1
+
+    .container
+        position: relative
+        z-index: 1
+        margin: 0 auto
+        width: 100%
+
+    &-img
+        text-align: center
+        img
+            margin: 0 auto
+
+    @media screen and ( max-width: 900px )
+        padding: 18vw 0 0
+        .container
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+
+        h1
+            font-size: 40px
+            line-height: 115%
+            transform: rotate(-15deg)
+            position: relative
+            z-index: 1
+            width: 92%
+            max-width: 360px
+            margin: 0 auto
+
+            .big
+                display: block
+                font-size: 60px
+                line-height: 78%
+
+            .last
+                display: block
+                text-align: right
+                line-height: 78%
+
+            img
+                width: 130px
+                position: absolute
+                top: -30px
+                right: 80px
+
+        &-img
+            text-align: center
+            position: relative
+            top: -15px
+            margin-bottom: 27px
+            img
+                &:first-child
+                    display: none
+
+        .download
+            padding: 15px 25px 38px
+            background-color: #fff
+
+        &-right
+            margin-top: auto
+            .pop
+                position: absolute
+                top: -80px
+                left: 50%
+                transform: translateX(-50%)
+                display: none
+
+                &:first-child
+                    display: block
+
+    @media screen and ( min-width: 900px )
+        .container
+            max-width: 1460px
+            width: 100%
+            padding: 10vh 0 0
+            margin: 0 auto
+
+        h1
+            width: 70%
+            max-width: 970px
+            font-size: 96px
+            line-height: 97%
+
+        &-img
+            width: 1120px
+            text-align: right
+            position: relative
+            z-index: 111
+            top: -20px
+            left: -50px
+            img
+                &:first-child
+                    z-index: -1
+                    position: absolute
+                    left: 0
+                    bottom: 0
+
+        &-right
+            position: absolute
+            right: 0
+            top: 54%
+            width: 341px
+            transform: translateY(-50%) rotate(3.19deg)
+            .pop
+                position: absolute
+                &:first-child
+                    z-index: 11
+                    top: -55px
+                    right: 30%
+                    transform: rotate(-7deg)
+                &:nth-child(2)
+                    top: 35%
+                    transform: rotate(20deg)
+                    right: -38%
+                &:nth-child(3)
+                    bottom: 17%
+                    left: -33%
+                    transform: rotate(-8deg)
+
+        .download
+            max-width: 42%
+            margin: 0
+
+    @media screen and ( min-width: 900px ) and ( max-width: 1500px )
+        .container
+            max-width: 1100px
+
+        h1
+            max-width: 670px
+            font-size: 64px
+
+        &-img
+            max-width: 69%
+            img
+                max-width: 60%
+                &:nth-of-type(2)
+                    max-width: 70%
+
+.download
+    text-align: center
+    position: relative
+    z-index: 999
+    &__heading
+        font-size: 13px
+        font-weight: 600
+        color: #D0D0D0
+        margin-bottom: 6px
+
+    &__btn
+        display: inline-block
+        margin: 0 2px
+        max-width: 47%
+
+.pop
+    text-align: left
+    width: 90%
+    max-width: 345px
+    margin: 0 auto
+    background: rgba(white, .55)
+    backdrop-filter: blur(35px)
+    background-blend-mode: color-dodge
+    padding: 7px 18px 7px 62px
+    position: relative
+    color: #000
+    border-radius: 20px
+    &::before,
+    &::after
+        content: ''
+        display: inline-block
+        width: 38px
+        height: 38px
+        background-image: url('../img/fire.png')
+        background-repeat: no-repeat
+        background-position: center center
+        background-size: contain
+        position: absolute
+        bottom: -9px
+        right: 0
+        transform: rotate(5deg)
+        z-index: 11
+        pointer-events: none
+
+    &::before
+        width: 26px
+        height: 26px
+        bottom: -4px
+        left: 0
+        transform: rotate(-5deg)
+
+    &__img
+        position: absolute
+        left: 14px
+        border-radius: 8px
+        width: 38px
+        height: 38px
+        object-fit: cover
+        top: 50%
+        transform: translateY(-50%)
+
+    &__heading
+        max-width: 70%
+        font-weight: 600
+        font-size: 16px
+        line-height: 21px
+        letter-spacing: -0.32px
+        margin: 0
+
+        &::before
+            content: ''
+            display: inline-block
+            width: 38px
+            height: 25px
+            background-image: url('../img/fire.png')
+            background-repeat: no-repeat
+            background-position: top center
+            background-size: 38px
+            position: absolute
+            top: -25px
+            left: 60px
+            pointer-events: none
+            z-index: -11
+
+    &__text
+        font-size: 13px
+
+    &__time
+        position: absolute
+        top: 7px
+        right: 18px
+        font-weight: 400
+        line-height: 18px
+        font-size: 13px
+        color: rgba(0, 0, 0, .4)
+
+.phone
+    padding: 82px 36px 18px
+    margin: 0 auto
+    text-align: center
+    background-image: url('../img/mockup.png')
+    background-repeat: no-repeat
+    background-size: 100% auto
+    background-position: center top
+    color: black
+    width: 250px
+    filter: drop-shadow(-50px 20px 30px rgba(0, 0, 0, .4))
+    border-radius: 42px 42px 0 0
+    position: relative
+    z-index: 1
+    span
+        display: block
+
+    &-btn
+        width: 100%
+        margin: 0 0 55px
+
+    &__code
+        font-size: 32px
+        font-weight: 700
+        margin: 0 0 9px
+
+    &__descr
+        font-size: 11px
+        font-weight: 600
+        letter-spacing: .5px
+        &.anim
+            animation: fadeUp .3s ease forwards
+
+    &__text
+        font-size: 10px
+        margin: 0 0 40px
+
+    @media screen and ( min-width: 900px )
+        width: 260px
+        height: 513px
+        padding: 82px 40px 18px
+        filter: drop-shadow(-60px 70px 39px rgba(0, 0, 0, 0.3))
+        position: relative
+        z-index: 1
+        &::after
+            content: ''
+            display: block
+            width: 345px
+            height: 360px
+            position: absolute
+            top: 65%
+            left: 1px
+            z-index: 111
+            background-image: url('../img/lents.svg')
+            background-repeat: no-repeat
+            background-position: center center
+            pointer-events: none
+
+@keyframes fadeUp
+    0%
+        opacity: 0
+        transform: translateY(20px)
+    100%
+        opacity: 1
+        transform: translateY(0px)

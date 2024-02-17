@@ -1,0 +1,66 @@
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    border: none
+    outline: none
+
+body
+    min-height: 100vh
+    color: white
+    font-size: 16px
+    background-color: #4D01BA
+    font-family: 'SF Pro Display', sans-serif
+
+    background-repeat: no-repeat
+    background-position: top center
+    background-size: cover
+    background-image: url('../img/bg-mob.svg')
+    
+
+    @media screen and ( max-width: 900px )
+        // align-items: center
+
+    @media screen and ( min-width: 900px )
+        align-items: center
+        background-position: center center
+        background-image: url('../img/bg-pc.svg')
+
+    &.active
+        overflow: hidden
+
+h1, h2, h3
+    font-family: 'StrogiyDemo', 'SF Pro Display', sans-serif
+    margin: 0
+
+img
+    max-width: 100%
+
+mark
+    background-color: rgba(0, 0, 0, 0)
+    color: #32D264
+
+a,
+button
+    text-decoration: none
+    transition: all ease .2s
+    background-color: transparent
+    &:active
+        transform: scale(.98)
+
+.btn,
+.btn_2
+    display: inline-block
+    font-size: 10px
+    font-style: normal
+    font-weight: 600
+    padding: 10px 22px
+    text-align: center
+    border-radius: 5px
+    color: white
+    background-color: #2FC25D
+
+.btn_2
+    color: #000
+    background-color: #F5F6FA
+    margin-top: 7px

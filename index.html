@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Промокод</title>
+    <meta name="theme-color" content="#4D01BA" />
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="./fonts/stylesheet.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+    <main class="main">
+        <div class="container">
+            <h1>
+                ПРОМОКОД
+                <span class="big">НА 2000</span>
+                <mark>БОНУСНЫХ</mark>
+                <span class="last">РУБЛЕИ</span>
+                <img src="img/citydrive.png" alt="citydrive">
+            </h1>
+
+            <div class="main-img">
+                <img src="img/car-1.png" alt="car">
+                <img src="img/car-2.png" alt="car">
+            </div>
+
+            <div class="main-right">
+                <div class="pop">
+                    <img src="img/poster.jpg" class="pop__img" alt="poster">
+                    <span class="pop__time">только что</span>
+                    <p class="pop__heading">Ситидрайв</p>
+                    <p class="pop__text">
+                        Вы активировали промокод EgxcgS
+                        Вам начислено 2.000 рублей!
+                    </p>
+                </div>
+                <div class="pop">
+                    <img src="img/poster.jpg" class="pop__img" alt="poster">
+                    <span class="pop__time">только что</span>
+                    <p class="pop__heading">Ситидрайв</p>
+                    <p class="pop__text">
+                        Вы активировали промокод EgxcgS
+                        Вам начислено 2.000 рублей!
+                    </p>
+                </div>
+                <div class="pop">
+                    <img src="img/poster.jpg" class="pop__img" alt="poster">
+                    <span class="pop__time">только что</span>
+                    <p class="pop__heading">Ситидрайв</p>
+                    <p class="pop__text">
+                        Вы активировали промокод EgxcgS
+                        Вам начислено 2.000 рублей!
+                    </p>
+                </div>
+                <div class="phone">
+                    <button onclick="copyText()" data-copy="EgxcgS" id="btn" class="phone-btn">
+                        <span class="phone__code">EgxcgS</span>
+                        <span id="answer" class="phone__descr">Нажми чтобы скопировать</span>
+                    </button>
+                    <p class="phone__text">
+                        Поздравляем! Вы ввели промокод на 2000 бонусных рублей!
+                        <br>
+                        <br>
+                        Можете воспользоваться ими в любой момент.
+                    </p>
+                    <span class="btn">Ввести промокод</span>
+                    <span class="btn_2">Поделиться промокодом</span>
+                </div>
+            </div>
+
+            <div class="download">
+                <p class="download__heading">Доступно в Apple Store и Google Play</p>
+                <a href="#" target="_blank" class="download__btn"><img src="img/googleplay.svg" alt="googleplay"></a>
+                <a href="#" target="_blank" class="download__btn"><img src="img/appstore.svg" alt="appstore"></a>
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+        function copyText() {
+            var button = document.querySelector('#btn');
+            var answer = document.querySelector('#answer');
+            var dataToCopy = button.getAttribute('data-copy');
+            navigator.clipboard.writeText(dataToCopy)
+                .then(function () {
+                    answer.innerHTML = 'Скопировано';
+                    answer.classList.add('anim');
+                    setTimeout(() => {
+                        answer.innerHTML = 'Нажми чтобы скопировать';
+                        answer.classList.remove('anim');
+                    }, 2000);
+                })
+                .catch(function (err) { answer.innerHTML = err });
+        }
+    </script>
+
+
+</body>
+
+</html>
